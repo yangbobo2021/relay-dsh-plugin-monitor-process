@@ -31,8 +31,20 @@ jobs:
       - name: Require the release commit on main
         run: git merge-base --is-ancestor "$GITHUB_SHA" origin/main
       - run: npm run verify
-      - run: npm install --global "npm@^11.15.0"
-      - run: npm publish --access public --tag "${{ steps.release.outputs.npm_tag }}"
+      - name: Check whether this version already exists
+        id: registry
+        shell: bash
+        run: |
+          package_name="$(node -p "require('./package.json').name")"
+          if npm view "${package_name}@${{ steps.release.outputs.version }}" version >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.registry.outputs.exists != 'true'
+        run: npm install --global "npm@^11.15.0"
+      - if: steps.registry.outputs.exists != 'true'
+        run: npm publish --access public --tag "${{ steps.release.outputs.npm_tag }}"
       - name: Verify the published dist-tag
         shell: bash
         run: |
