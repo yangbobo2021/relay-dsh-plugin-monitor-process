@@ -2,12 +2,20 @@
   "name": "relay-dsh-plugin-monitor-process",
   "version": "0.1.0",
   "description": "Read-only process identity capability for Agent-authored Relay Monitor Bundles.",
+  "keywords": ["dsh-plugin", "deepseek-harness", "monitoring", "monitor-bundles", "process"],
   "license": "MIT",
   "type": "module",
   "main": "./host-plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process.git"
+  },
+  "homepage": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process#readme",
+  "bugs": { "url": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process/issues" },
   "exports": { ".": "./host-plugin.js", "./package.json": "./package.json" },
-  "files": ["README.md", "README.zh.md", "SPEC.md", "docs", "cordis.patch.yml", "host-plugin.js", "agent-bridge.js", "src"],
+  "files": ["README.md", "README.zh.md", "CHANGELOG.md", "SPEC.md", "docs", "cordis.patch.yml", "host-plugin.js", "agent-bridge.js", "src"],
   "engines": { "node": ">=22.13" },
+  "publishConfig": { "access": "public", "tag": "latest" },
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
   "scripts": {
     "typecheck": "node --check host-plugin.js && node --check agent-bridge.js && node --check src/process-capability.mjs",
@@ -24,5 +32,8 @@
     "@deepseek-ai/cordis": { "optional": true },
     "@deepseek-ai/dsh-tools": { "optional": true },
     "relay-dsh-plugin-monitors": { "optional": true }
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.1.2-alpha.3"
   }
 }
