@@ -1,8 +1,14 @@
 {
   "name": "relay-dsh-plugin-monitor-process",
-  "version": "0.1.1",
+  "version": "0.1.2-rc.1",
   "description": "Read-only process identity capability for Agent-authored Relay Monitor Bundles.",
-  "keywords": ["dsh-plugin", "deepseek-harness", "monitoring", "monitor-bundles", "process"],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "monitoring",
+    "monitor-bundles",
+    "process"
+  ],
   "license": "MIT",
   "type": "module",
   "main": "./host-plugin.js",
@@ -11,12 +17,36 @@
     "url": "git+https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process.git"
   },
   "homepage": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process#readme",
-  "bugs": { "url": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process/issues" },
-  "exports": { ".": "./host-plugin.js", "./package.json": "./package.json" },
-  "files": ["README.md", "README.zh.md", "CHANGELOG.md", "SPEC.md", "docs", "cordis.patch.yml", "host-plugin.js", "agent-bridge.js", "src"],
-  "engines": { "node": ">=22.13" },
-  "publishConfig": { "access": "public", "tag": "latest" },
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "bugs": {
+    "url": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process/issues"
+  },
+  "exports": {
+    ".": "./host-plugin.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "SPEC.md",
+    "docs",
+    "cordis.patch.yml",
+    "host-plugin.js",
+    "agent-bridge.js",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
   "scripts": {
     "typecheck": "node --check host-plugin.js && node --check agent-bridge.js && node --check src/process-capability.mjs",
     "build": "npm run typecheck",
@@ -26,15 +56,21 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": ">=4.0.2 <5",
     "@deepseek-ai/dsh-tools": ">=0.1.1-rc.2 <0.1.2-0 || >=0.1.2-alpha.2 <0.1.3-0",
-    "relay-dsh-plugin-monitors": "0.3.1"
+    "relay-dsh-plugin-monitors": "0.3.2-rc.1"
   },
   "peerDependenciesMeta": {
-    "@deepseek-ai/cordis": { "optional": true },
-    "@deepseek-ai/dsh-tools": { "optional": true },
-    "relay-dsh-plugin-monitors": { "optional": true }
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "relay-dsh-plugin-monitors": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@deepseek-ai/dsh-tools": "0.1.2-rc.1",
-    "relay-dsh-plugin-monitors": "github:yangbobo2021/relay-dsh-plugin-monitors#2a2ad7a76ab5e00ba6897d545b91751f1d5f0484"
+    "relay-dsh-plugin-monitors": "github:yangbobo2021/relay-dsh-plugin-monitors#fb21417cec72df9558fa8ccbe6ce5f61b8c3a15a"
   }
 }

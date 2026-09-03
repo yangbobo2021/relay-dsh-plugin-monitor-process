@@ -14,9 +14,9 @@
 
 ```bash
 npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
-  relay-dsh-plugin-monitors@0.3.1 \
-  relay-dsh-plugin-monitor-process@0.1.1 \
-  relay-dsh-plugin-monitor-author@0.1.1
+  relay-dsh-plugin-monitors@0.3.2-rc.1 \
+  relay-dsh-plugin-monitor-process@0.1.2-rc.1 \
+  relay-dsh-plugin-monitor-author@0.1.2-rc.1
 ```
 
 同一批制品继续兼容已审计的 DSH `0.1.2-alpha.3` Profile。
