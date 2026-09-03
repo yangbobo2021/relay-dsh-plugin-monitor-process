@@ -13,11 +13,13 @@
 请与 Monitor Core 和 Author 一起安装公开正式版本：
 
 ```bash
-npx @deepseek-ai/dsh@0.1.2-alpha.3 plugin --profile web add --save-exact \
-  relay-dsh-plugin-monitors@0.3.0 \
-  relay-dsh-plugin-monitor-process@0.1.0 \
-  relay-dsh-plugin-monitor-author@0.1.0
+npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
+  relay-dsh-plugin-monitors@0.3.1 \
+  relay-dsh-plugin-monitor-process@0.1.1 \
+  relay-dsh-plugin-monitor-author@0.1.1
 ```
+
+同一批制品继续兼容已审计的 DSH `0.1.2-alpha.3` Profile。
 
 插件签发与 Session 和项目绑定的不透明 Process Handle。PID 只在签发 Handle 时
 使用，绝不会写入自定义 Bundle。

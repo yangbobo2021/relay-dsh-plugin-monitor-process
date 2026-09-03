@@ -12,4 +12,4 @@
 | MB07-008 | Lifecycle/restart | Persistent host identity survives restart; unload removes tool/provider and reinstall restores compatible checks without duplicate delivery. | Relay composition + official DSH |
 | MB07-009 | Races | Stop, process exit, duplicate check, and concurrent claim resolve to at most one durable Event/Delivery. | SQLite composition gate |
 | MB07-010 | Standalone repository | Clean clone installs from its own lockfile and no runtime or test import crosses into Relay. | fresh `npm ci` + boundary scan |
-| MB07-011 | Public release | GitHub `v0.1.0`, npm `0.1.0`, package metadata, packed integrity, and `latest` identify one artifact. | CI + registry query + fresh DSH profile |
+| MB07-011 | Public release | GitHub `v0.1.1`, npm `0.1.1`, package metadata, packed integrity, and `latest` identify one artifact. | CI + registry query + fresh DSH profile |
