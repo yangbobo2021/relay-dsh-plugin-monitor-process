@@ -1,6 +1,6 @@
 # Relay Process Monitor Capability Specification
 
-Status: normative for `0.1.0`
+Status: normative for `0.1.1`
 
 This extension does not register a prebuilt Bundle Type. It registers the read-only
 `process.read/status` capability and `relay_issue_process_handle` tool so an Agent can
