@@ -1,6 +1,6 @@
 # Relay Process Monitor Capability
 
-> **Release candidate `0.1.2-rc.2` is verified on official DSH `0.1.5-rc.2`
+> **Stable `0.1.2` is verified on official DSH `0.1.5-rc.2`
 > and `0.1.6-alpha.1`.** No implementation adaptation was required; its peer
 > metadata declares both exact releases.
 
