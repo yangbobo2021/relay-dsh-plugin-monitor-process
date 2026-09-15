@@ -1,5 +1,8 @@
 # Relay Process Monitor Capability
 
+> **候选版本 `0.1.2-rc.2` 已在官方 DSH `0.1.5-rc.2` 和
+> `0.1.6-alpha.1` 上验证。** 无需修改实现，peer 元数据已声明两个精确版本。
+
 [![npm 版本](https://img.shields.io/npm/v/relay-dsh-plugin-monitor-process?label=npm)](https://www.npmjs.com/package/relay-dsh-plugin-monitor-process)
 [![CI](https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process/actions/workflows/ci.yml/badge.svg)](https://github.com/yangbobo2021/relay-dsh-plugin-monitor-process/actions/workflows/ci.yml)
 [![MIT 许可证](https://img.shields.io/github/license/yangbobo2021/relay-dsh-plugin-monitor-process)](LICENSE)
