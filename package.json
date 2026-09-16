@@ -1,6 +1,6 @@
 {
   "name": "relay-dsh-plugin-monitor-process",
-  "version": "0.1.2",
+  "version": "0.1.3-rc.1",
   "description": "Read-only process identity capability for Agent-authored Relay Monitor Bundles.",
   "keywords": [
     "dsh-plugin",
